@@ -1,0 +1,36 @@
+name: yoda_eval
+stability: alpha  # New component without proven track record
+dependencies:
+  kubeflow:
+    - name: Pipelines
+      version: '>=2.5'
+  external_services:
+    - name: CUDA GPU
+      version: "compatible"
+    - name: HuggingFace Transformers
+      version: "latest"
+    - name: PyTorch
+      version: "latest"
+    - name: LM Evaluation Harness
+      version: "latest"
+    - name: VLLM
+      version: "latest"
+    - name: Unitxt
+      version: "latest"
+tags:
+  - evaluation
+  - llm_evaluation
+  - model_evaluation
+  - yoda_speak
+  - classification
+  - summarization
+  - translation
+  - benchmarking
+  - gpu
+lastVerified: 2025-12-15T00:00:00Z
+ci:
+  compile_check: true
+  pytest: optional
+  skip_dependency_probe: true  # Skip dependency probe due to GPU and heavy ML dependencies
+links:
+  issue_tracker: https://github.com/kubeflow/pipelines-components/issues

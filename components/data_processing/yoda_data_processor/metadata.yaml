@@ -1,0 +1,21 @@
+name: yoda_data_processor
+stability: alpha  # New component without proven track record
+dependencies:
+  kubeflow:
+    - name: Pipelines
+      version: '>=2.5'
+  external_services:
+    - name: HuggingFace Datasets
+      version: "latest"
+tags:
+  - data_processing
+  - dataset_preparation
+  - text_processing
+  - yoda_speak
+  - translation
+lastVerified: 2025-12-15T00:00:00Z
+ci:
+  compile_check: true
+  pytest: optional
+links:
+  issue_tracker: https://github.com/kubeflow/pipelines-components/issues

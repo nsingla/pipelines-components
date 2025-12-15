@@ -1,9 +1,9 @@
 import kfp
 from kfp import dsl, kubernetes
 
-from components.data_processing.yoda_data_preparation import prepare_yoda_dataset
+from components.data_processing.yoda_data_processor.component import prepare_yoda_dataset
 from components.training.train_yoda_model import train_model
-from components.evaluation.evaluate_yoda_model import evaluate_yoda_model
+from components.evaluation.yoda_eval.component import evaluate_yoda_model
 
 
 @dsl.pipeline(
